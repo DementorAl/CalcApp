@@ -123,6 +123,10 @@ public class MatchParser {
         String a, b;
         int i = 0;
         while (symArray.length != i) {
+            if (symArray[i].equals(" ")){
+                i++;
+                continue;
+            }
             if (isOperator(symArray[i])) {
                 b = stack.pop();
                 a = stack.pop();
